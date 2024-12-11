@@ -2,6 +2,7 @@ package com.example.nutrisia
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nutrisia.databinding.ActivityDailyStreakBinding
@@ -40,27 +41,31 @@ class DiaryActivity : AppCompatActivity() {
             startActivity(Intent(this, ActivityUserInformation::class.java))
         }
 
-        // Navigasi ke AboutUsActivity
         binding.IconAbout.setOnClickListener {
             val intent = Intent(this, AboutUsActivity::class.java)
             intent.putExtra("USER_ID", userId)
             startActivity(intent)
         }
 
-        // Navigasi ke ActivityInsertProfile saat tombol Isi Profile ditekan
         binding.btnIsiProfile.setOnClickListener {
             if (userId != null) {
                 val intent = Intent(this, ActivityInsertProfile::class.java)
-                intent.putExtra("USER_ID", userId) // Mengirimkan user_id ke ActivityInsertProfile
+                intent.putExtra("USER_ID", userId)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "User ID tidak ditemukan", Toast.LENGTH_SHORT).show()
             }
         }
 
-        // Navigasi ke ActivityBeratBadan saat LinearLayout diklik
         binding.LinearLayoutBeratBadan.setOnClickListener {
             val intent = Intent(this, ActivityBeratBadan::class.java)
+            startActivity(intent)
+        }
+
+        // Navigasi ke OCRActivity saat ll_food_target diklik
+        val llFoodTarget = findViewById<LinearLayout>(R.id.ll_food_target)
+        llFoodTarget.setOnClickListener {
+            val intent = Intent(this, OcrActivity::class.java)
             startActivity(intent)
         }
     }

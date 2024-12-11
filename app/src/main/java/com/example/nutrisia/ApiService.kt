@@ -8,6 +8,8 @@ import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
 import retrofit2.http.PartMap
+import retrofit2.Response
+import com.example.nutrisia.ScanCalorieRequest
 
 interface ApiService {
     @POST("api/kelompok_1/register.php")
@@ -32,6 +34,10 @@ interface ApiService {
         @Part foto: MultipartBody.Part?
     ): Call<ProfileResponse>
 
+    @POST("api/kelompok_1/save_calories.php")
+    suspend fun postScanCalorie(
+        @Body request: ScanCalorieRequest
+    ): Response<ApiResponse>
 }
 
 

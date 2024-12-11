@@ -9,4 +9,5 @@
     <color name="streak_background">#E3F2FD</color>  <!-- Light Blue -->
     <color name="mood_background">#E8F5E9</color>    <!-- Light Green -->
     <color name="food_target_background">#FFF8E1</color>  <!-- Light Yellow -->
+    <color name="redPrimer">#F44336</color>
 </resources>
