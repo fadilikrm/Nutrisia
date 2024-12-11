@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.nutrisia.databinding.ActivityUserInformationBinding
@@ -53,6 +54,32 @@ class ActivityUserInformation : AppCompatActivity() {
             } ?: run {
                 Toast.makeText(this, "Profil belum dimuat", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        // Navigasi dengan ikon di toolbar
+        val iconAbout = findViewById<ImageView>(R.id.IconAbout)
+        val homeIcon = findViewById<ImageView>(R.id.homeIcon)
+        val iconProfile = findViewById<ImageView>(R.id.IconProfile)
+
+        // Set tindakan untuk ikon Pengaturan
+        iconAbout.setOnClickListener {
+            // Membuka Activity About Us
+            val intent = Intent(this, AboutUsActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Set tindakan untuk ikon Beranda
+        homeIcon.setOnClickListener {
+            // Membuka DiaryActivity
+            val intent = Intent(this, DiaryActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Set tindakan untuk ikon Profil
+        iconProfile.setOnClickListener {
+            // Membuka ActivityUserInformation (mungkin ke halaman ini sendiri jika ingin)
+            val intent = Intent(this, ActivityUserInformation::class.java)
+            startActivity(intent)
         }
     }
 

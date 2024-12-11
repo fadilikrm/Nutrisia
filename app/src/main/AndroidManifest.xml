@@ -38,6 +38,9 @@
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
+            android:name=".ActivityInsertProfile"
+            android:exported="true" />
+        <activity
             android:name=".AboutUsActivity"
             android:exported="true" />
         <activity
@@ -51,6 +54,9 @@
             android:exported="true" />
         <activity
             android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityBeratBadan"
             android:exported="true" />
     </application>
 

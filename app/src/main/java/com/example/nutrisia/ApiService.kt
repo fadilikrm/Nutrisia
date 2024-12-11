@@ -19,6 +19,12 @@ interface ApiService {
     @POST("api/kelompok_1/select_profile.php")
     fun getProfile(@Body params: Map<String, String>): Call<SelectProfileResponse>
 
+    @POST("api/kelompok_1/select_profile.php")
+    fun getProgram(@Body params: Map<String, String>): Call<ViewProgramResponse>
+
+    @POST("api/kelompok_1/insert_profile.php")
+    fun insertProfile(@Body profile: InsertProfile): Call<InsertProfile>
+
     @Multipart
     @POST("api/kelompok_1/update_profile.php")
     fun updateProfile(
