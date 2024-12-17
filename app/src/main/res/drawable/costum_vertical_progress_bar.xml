@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background for vertical progress bar -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="10dp" />
+            <solid android:color="@color/white" /> <!-- Background color -->
+        </shape>
+    </item>
+
+    <!-- Vertical progress drawable -->
+    <item android:id="@android:id/progress">
+        <clip android:orientation="vertical"> <!-- Set orientation to vertical -->
+            <shape>
+                <corners android:radius="10dp" />
+                <solid android:color="#7FB486" /> <!-- Progress color -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center"> <!-- Mengikuti layout halaman login -->
+
+    <!-- Logo di bagian head (Optional, jika ingin menambahkan logo) -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:contentDescription="Logo"
+        android:src="@mipmap/nutrisia" />
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/coolvetica_rg"
+            android:gravity="center">
+        </TextView>
+
+    <!-- FullName Input -->
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Nama Lengkap"
+            android:fontFamily="@font/roboto_light"/>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Username"
+        android:fontFamily="@font/roboto_light"/>
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:fontFamily="@font/roboto_light"/>
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:fontFamily="@font/roboto_light"/>
+
+    <!-- Confirm Password Input -->
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:fontFamily="@font/roboto_light"/>
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Daftar"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/coolvetica_rg"
+        android:backgroundTint="@color/greenPrimer"/>
+</LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Link to Login -->
+    <TextView
+        android:id="@+id/tvLoginLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sudah punya akun? Login di sini"
+        android:textColor="@android:color/holo_blue_dark"
+        android:fontFamily="@font/roboto_light"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

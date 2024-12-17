@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title Section -->
+    <LinearLayout
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/nutrisia" />
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/coolvetica_rg"
+            android:text="Nutrisia"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- Description Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Selamat Datang Di Aplikasi NUTRISIA, Silahkan Mengisi Informasi Pribadi Anda Untuk Dijadikan Acuan dalam Aplikasi Kami"
+        android:fontFamily="@font/roboto_light"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"/>
+
+    <!-- User ID (Non-editable) -->
+
+    <!-- Weight Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan berat badan anda"
+        android:fontFamily="@font/coolvetica_rg"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextBB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="Berat badan (KG)"
+        android:inputType="number" />
+
+    <!-- Height Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan tinggi badan anda"
+        android:fontFamily="@font/coolvetica_rg"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextTB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="Tinggi badan (CM)"
+        android:inputType="number" />
+
+    <!-- Gender Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Jenis Kelamin"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_light" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupJk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="Laki-Laki" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="Perempuan" />
+    </RadioGroup>
+
+    <!-- Age Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Masukkan usia anda"
+        android:fontFamily="@font/coolvetica_rg"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextUsia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="Usia Anda (Tahun)"
+        android:inputType="number" />
+
+    <!-- Activity Level Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aktivitas"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_light" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupAktivitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/radioLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="Rendah" />
+
+        <RadioButton
+            android:id="@+id/radioMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="Sedang" />
+
+        <RadioButton
+            android:id="@+id/radioHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="Tinggi" />
+    </RadioGroup>
+
+    <!-- Button to Submit Profile -->
+    <Button
+        android:id="@+id/buttonInsertProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coolvetica_rg"
+        android:text="Isi Profile"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#7FB486"
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

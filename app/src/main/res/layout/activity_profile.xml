@@ -1,0 +1,215 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Profile Title -->
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Page"
+            android:fontFamily="@font/coolvetica_rg"
+            android:textSize="24sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Profile Picture ImageView -->
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Profile Picture"
+            android:layout_marginBottom="16dp"
+            android:clipToOutline="true"
+            android:background="@drawable/circle_shape" />
+
+        <!-- Button for Uploading New Photo -->
+        <Button
+            android:id="@+id/buttonUploadPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coolvetica_rg"
+            android:text="Upload Photo"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#7FB486"
+            android:textColor="#FFFFFF" />
+
+        <!-- Full Name Input Field -->
+        <EditText
+            android:id="@+id/editTextFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Full Name" />
+
+        <!-- Username Input Field -->
+        <EditText
+            android:id="@+id/editUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Username" />
+
+        <!-- Email Input Field -->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <!-- Tinggi Badan dan Berat Badan -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Tinggi Badan -->
+            <EditText
+                android:id="@+id/editTb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Tinggi Badan (cm)"
+                android:inputType="number" />
+
+            <!-- Spacing -->
+            <View
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <!-- Berat Badan -->
+            <EditText
+                android:id="@+id/editBb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Berat Badan (kg)"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <!-- Jenis Kelamin -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_light" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupJk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="Laki-Laki"
+                android:value="laki" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="Perempuan"
+                android:value="perempuan" />
+        </RadioGroup>
+
+        <!-- Age Input Field -->
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Usia (tahun)"
+            android:inputType="number" />
+
+        <!-- Aktivitas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aktivitas"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_light" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupAktivitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/radioLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="Rendah"
+                android:value="rendah" />
+
+            <RadioButton
+                android:id="@+id/radioMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="Sedang"
+                android:value="sedang" />
+
+            <RadioButton
+                android:id="@+id/radioHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="Tinggi"
+                android:value="tinggi" />
+        </RadioGroup>
+
+        <!-- Password Input Field -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/roboto_light"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Edit Profile Button -->
+        <Button
+            android:id="@+id/buttonEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coolvetica_rg"
+            android:text="Edit Profile"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#7FB486"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground">
+
+    <!-- Logo atau Teks -->
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:src="@mipmap/nutrisia"
+        android:contentDescription="Logo" />
+</LinearLayout>

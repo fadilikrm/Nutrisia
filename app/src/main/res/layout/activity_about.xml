@@ -1,0 +1,123 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Konten di atas Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_toolbar">
+
+        <!-- Logo atau Gambar Aplikasi -->
+        <ImageView
+            android:id="@+id/img_logo_nutrisia"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@mipmap/nutrisia"
+            android:contentDescription="Logo Nutrisia"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Judul Halaman About Us -->
+        <TextView
+            android:id="@+id/tv_about_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nutrisia"
+            android:textSize="40sp"
+            android:fontFamily="@font/coolvetica_rg"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Deskripsi Aplikasi -->
+        <TextView
+            android:id="@+id/tv_about_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplikasi NUTRISIA (Nutrisi Terpantau Sehat Ideal dan Akurat) membantu mencegah obesitas dengan memindai label nutrisi makanan melalui Smart OCR. Dilengkapi rekomendasi diet sesuai data fisik dan fitur penghitungan kalori, NUTRISIA mendukung keputusan diet yang lebih sehat."
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_regular"
+            android:lineSpacingExtra="2dp"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- Nama Tim -->
+        <TextView
+            android:id="@+id/tv_our_team_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Our Team"
+            android:textSize="20sp"
+            android:fontFamily="@font/coolvetica_rg"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Daftar Nama Tim -->
+        <TextView
+            android:id="@+id/tv_team_members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Ahmad Fadhil Ikram\n• Adinda Khusnul Khotimah\n• Paskal Arvito Weni\n• Sri Husna Anggraeni"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp" />
+
+        <!-- Button untuk informasi lebih lanjut atau kontak -->
+        <Button
+            android:id="@+id/btn_contact_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:textColor="@color/white"
+            android:fontFamily="@font/coolvetica_rg"
+            android:backgroundTint="#7FB486"
+            android:layout_marginTop="24dp"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Toolbar di bagian bawah -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?android:attr/colorBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Ikon Pengaturan -->
+        <ImageView
+            android:id="@+id/IconAbout"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="80dp"
+            android:contentDescription="Pengaturan"
+            android:src="@drawable/information" />
+
+        <!-- Ikon Beranda -->
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:contentDescription="Beranda"
+            android:src="@drawable/baseline_home_24" />
+
+        <!-- Ikon Pencarian -->
+        <ImageView
+            android:id="@+id/IconProfile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="80dp"
+            android:contentDescription="Pencarian"
+            android:src="@drawable/ic_profile" />
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

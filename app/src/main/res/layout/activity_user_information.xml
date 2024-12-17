@@ -1,0 +1,207 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ScrollView untuk konten profile -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_toolbar"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Profile Title -->
+            <TextView
+                android:id="@+id/profileTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile View"
+                android:fontFamily="@font/coolvetica_rg"
+                android:textSize="24sp"
+                android:layout_marginBottom="24dp" />
+
+            <ImageView
+                android:id="@+id/imageViewProfile"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile"
+                android:contentDescription="Profile Picture"
+                android:layout_marginBottom="16dp"
+                android:clipToOutline="true"
+                android:background="@drawable/circle_shape" />
+
+            <!-- Full Name Field -->
+            <EditText
+                android:id="@+id/editTextFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Full Name"
+                android:enabled="false" />
+
+            <!-- Username Field -->
+            <EditText
+                android:id="@+id/editUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Username"
+                android:enabled="false" />
+
+            <!-- Email Field -->
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Email"
+                android:enabled="false" />
+
+            <!-- Tinggi Badan Field -->
+            <EditText
+                android:id="@+id/editTb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Tinggi Badan (cm)"
+                android:enabled="false" />
+
+            <!-- Berat Badan Field -->
+            <EditText
+                android:id="@+id/editBb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Berat Badan (kg)"
+                android:enabled="false" />
+
+            <!-- Gender Field -->
+            <EditText
+                android:id="@+id/editJk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Jenis Kelamin"
+                android:enabled="false" />
+
+            <!-- Age Field -->
+            <EditText
+                android:id="@+id/editAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Usia"
+                android:enabled="false" />
+
+            <!-- Activity Level Field -->
+            <EditText
+                android:id="@+id/editAktivitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Aktivitas"
+                android:enabled="false" />
+
+            <!-- Password Field -->
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:enabled="false"
+                android:inputType="textPassword" />
+
+            <!-- Buttons Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="24dp">
+
+                <!-- Logout Button -->
+                <Button
+                    android:id="@+id/buttonLogout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/coolvetica_rg"
+                    android:text="Logout"
+                    android:backgroundTint="#FF9999"
+                    android:textColor="#FFFFFF" />
+
+                <!-- Edit Profile Button -->
+                <Button
+                    android:id="@+id/buttonEditProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/coolvetica_rg"
+                    android:text="Edit Profile"
+                    android:backgroundTint="#7FB486"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Toolbar di bagian bawah dengan margin dan posisi yang sesuai -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/colorBackground"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp">
+
+        <!-- Ikon Pengaturan -->
+        <ImageView
+            android:id="@+id/IconAbout"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="80dp"
+            android:contentDescription="Pengaturan"
+            android:src="@drawable/information" />
+
+        <!-- Ikon Beranda -->
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:contentDescription="Beranda"
+            android:src="@drawable/baseline_home_24" />
+
+        <!-- Ikon Pencarian -->
+        <ImageView
+            android:id="@+id/IconProfile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="80dp"
+            android:contentDescription="Pencarian"
+            android:src="@drawable/ic_profile" />
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

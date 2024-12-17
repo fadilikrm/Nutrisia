@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="greenPrimer">#7FB486</color>
+    <color name="greenSekunder">#367642</color>
+    <color name="calorie_background">#FFEBEE</color> <!-- Light Red -->
+    <color name="streak_background">#E3F2FD</color>  <!-- Light Blue -->
+    <color name="mood_background">#E8F5E9</color>    <!-- Light Green -->
+    <color name="food_target_background">#FFF8E1</color>  <!-- Light Yellow -->
+    <color name="redPrimer">#F44336</color>
+</resources>

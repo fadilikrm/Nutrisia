@@ -1,0 +1,188 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OcrActivity"
+    tools:showIn="@layout/activity_ocr">
+
+    <!-- Root ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Header Layout with Logo and Title -->
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Logo Aplikasi -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@mipmap/nutrisia"
+                android:contentDescription="Logo Nutrisia"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Judul Halaman -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Check Food"
+                android:textSize="24sp"
+                android:fontFamily="@font/coolvetica_rg"
+                android:textColor="?android:textColorPrimary"
+                app:layout_constraintStart_toEndOf="@id/logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </LinearLayout>
+
+        <!-- Camera Preview -->
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <!-- Flashlight Icon -->
+        <ImageView
+            android:id="@+id/btn_flashlight_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_flashlight_off"
+            android:contentDescription="Toggle Flashlight"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toTopOf="@id/previewView"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Scan Label Button -->
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="384dp"
+            android:backgroundTint="@color/greenPrimer"
+            android:fontFamily="@font/coolvetica_rg"
+            android:text="Scan Label"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/redPrimer"
+            android:fontFamily="@font/coolvetica_rg"
+            android:text="Reset"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_scan" />
+
+        <!-- ImageView to Display Captured Image -->
+        <ImageView
+            android:id="@+id/imageViewCaptured"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="60dp"
+
+            android:contentDescription="Captured Image"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" /> <!-- Initially hidden -->
+
+        <!-- OCR Result Text -->
+
+        <!-- Calorie Result -->
+
+        <TextView
+            android:id="@+id/tv_scan_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/coolvetica_rg"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Hasil Teks Label"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_reset" />
+
+        <!-- Warning Message -->
+
+        <TextView
+            android:id="@+id/tv_calorie_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/coolvetica_rg"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Kalori: Belum Terdeteksi"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_scan_result" />
+
+        <Button
+            android:id="@+id/btnSaveCalorie"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/greenPrimer"
+            android:fontFamily="@font/coolvetica_rg"
+            android:text="Simpan Kalori"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_warning"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_warning"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Status: Belum Terdeteksi"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/coolvetica_rg"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/tv_calorie_result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
