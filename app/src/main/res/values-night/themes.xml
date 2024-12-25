@@ -4,5 +4,6 @@
         <!-- Gunakan warna sebagai primary color -->
         <item name="colorPrimary">@color/greenPrimer</item>
         <item name="colorPrimaryDark">@color/greenPrimer</item> <!-- untuk warna status bar -->
+        <item name="android:windowBackground">#FFFFFF</item>
     </style>
 </resources>

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:background="?android:attr/colorBackground">
+        android:background="#FFFFFF">
 
         <!-- Title Section -->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -342,8 +342,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/coolvetica_rg"
-                        android:text="Target Kalori Makanan"
+                        android:text="Scan Makanan"
                         android:layout_gravity="center"
+                        android:gravity="center_vertical"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -374,6 +375,7 @@
                         android:textColor="@color/black"
                         android:fontFamily="@font/coolvetica_rg"
                         android:layout_gravity="center"
+                        android:gravity="center_horizontal"
                         android:textSize="16sp" />
 
                     <ImageView
@@ -394,7 +396,7 @@
                     android:background="@drawable/costum_rectangle"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:gravity="center_vertical">
+                    android:gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -403,6 +405,7 @@
                         android:text="Aktivitas Fisik"
                         android:layout_gravity="center"
                         android:textColor="@color/black"
+                        android:gravity="center_horizontal"
                         android:textSize="15sp" />
 
                     <ImageView
@@ -457,7 +460,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginBottom="8dp"
-        android:background="?android:attr/colorBackground"
+        android:background="#FFFFFF"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp">
