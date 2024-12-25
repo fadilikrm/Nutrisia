@@ -70,7 +70,6 @@
             android:layout_marginStart="110dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/coolvetica_rg"
-            android:text="Paskal 👋"
             android:textColor="?android:textColorPrimary"
             android:textSize="45sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +80,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_light"
-            android:text="28 September 2024"
             android:textSize="14sp"
             android:textColor="?android:textColorPrimary"
             app:layout_constraintTop_toBottomOf="@+id/tv_NameUser"
@@ -127,7 +125,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_light"
-                android:text="Defisit Kalori"
                 android:textColor="?android:textColorPrimary"
                 android:textSize="15dp"
                 app:layout_constraintStart_toEndOf="@id/tv_Program3"
@@ -188,7 +185,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:fontFamily="@font/roboto_light"
-                        android:text="Ideal"
                         android:textColor="?android:textColorPrimary"
                         android:textSize="15dp" />
                 </LinearLayout>
@@ -211,12 +207,11 @@
                         android:textSize="16dp" />
 
                     <TextView
-                        android:id="@+id/textView_bmi_value"
+                        android:id="@+id/textViewbmivalue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:fontFamily="@font/roboto_light"
-                        android:text="22.5"
                         android:textColor="?android:textColorPrimary"
                         android:textSize="16dp" />
                 </LinearLayout>
@@ -279,7 +274,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:fontFamily="@font/roboto_light"
-                        android:text="1000 kcal"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -301,15 +295,15 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/tv_calorie_remaining_value"
+                        android:id="@+id/tvcalorieremainingvalue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:fontFamily="@font/roboto_light"
-                        android:text="200 kcal"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
                 </LinearLayout>
+
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -341,7 +335,8 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/costum_rectangle"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    android:gravity="center">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -362,30 +357,74 @@
 
                 <!-- Second Layout: Berat Badan -->
                 <LinearLayout
-                    android:id="@+id/LinearLayoutBeratBadan"
+                    android:id="@+id/LinearLayoutHistoryMakanan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
                     android:orientation="vertical"
                     android:background="@drawable/costum_rectangle2"
                     android:padding="16dp"
                     android:gravity="center_vertical">
 
-                    <!-- Icon on the left -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Berat Badan"
-                        android:textColor="@color/black"                       android:fontFamily="@font/coolvetica_rg"
-android:layout_gravity="center"                  android:textSize="16sp" />
+                        android:text="History Makanan"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/coolvetica_rg"
+                        android:layout_gravity="center"
+                        android:textSize="16sp" />
+
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-android:layout_marginTop="8dp"
+                        android:layout_marginTop="8dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/gain_weight"
+                        android:src="@drawable/baseline_history_24"
                         android:contentDescription="Icon Tekanan Darah" />
                 </LinearLayout>
+
+                <!-- Third Layout: Target Exercise -->
+                <LinearLayout
+                    android:id="@+id/Olahraga"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/costum_rectangle"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coolvetica_rg"
+                        android:text="Aktivitas Fisik"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/baseline_directions_run_24" /> <!-- Replace with your own exercise icon -->
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_horizontal_container2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <!-- First Food Target -->
             </LinearLayout>
 
             <!-- Additional Components Below -->
@@ -395,7 +434,7 @@ android:layout_marginTop="8dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/coolvetica_rg"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:text="Data belum muncul?"
                 android:textSize="20sp"
                 android:textColor="?android:textColorPrimary"/>

@@ -61,23 +61,17 @@ class ActivityUserInformation : AppCompatActivity() {
         val homeIcon = findViewById<ImageView>(R.id.homeIcon)
         val iconProfile = findViewById<ImageView>(R.id.IconProfile)
 
-        // Set tindakan untuk ikon Pengaturan
         iconAbout.setOnClickListener {
-            // Membuka Activity About Us
             val intent = Intent(this, AboutUsActivity::class.java)
             startActivity(intent)
         }
 
-        // Set tindakan untuk ikon Beranda
         homeIcon.setOnClickListener {
-            // Membuka DiaryActivity
             val intent = Intent(this, DiaryActivity::class.java)
             startActivity(intent)
         }
 
-        // Set tindakan untuk ikon Profil
         iconProfile.setOnClickListener {
-            // Membuka ActivityUserInformation (mungkin ke halaman ini sendiri jika ingin)
             val intent = Intent(this, ActivityUserInformation::class.java)
             startActivity(intent)
         }
@@ -92,7 +86,7 @@ class ActivityUserInformation : AppCompatActivity() {
         RetrofitClient.instance.getProfile(params).enqueue(object : Callback<SelectProfileResponse> {
             override fun onResponse(call: Call<SelectProfileResponse>, response: Response<SelectProfileResponse>) {
                 if (response.isSuccessful && response.body()?.status == true) {
-                    profileData = response.body()?.data?.getOrNull(0)
+                    profileData = response.body()?.data
                     if (profileData != null) {
                         populateProfileFields(profileData!!)
                     } else {
@@ -121,12 +115,13 @@ class ActivityUserInformation : AppCompatActivity() {
         binding.editAktivitas.setText(data.aktivitas)
         binding.editJk.setText(data.jk)
         binding.editAge.setText(data.age?.toString())
-        var originalPassword = data.password
+        val originalPassword = data.password
 
         // Tampilkan placeholder di EditText
         binding.editTextPassword.apply {
             setText("****") // Placeholder
         }
+
         // Debug: Log URL yang akan dimuat untuk foto
         val imageUrl = "https://22tkja.com/api/kelompok_1/${data.foto}"
         Log.d("Image URL", imageUrl)

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogwarningmessage"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv_warning_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/baseline_notification_important_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_warning_title" />
+
+    <TextView
+        android:id="@+id/tv_warning_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Peringatan Kalori"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="@font/coolvetica_rg"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/iv_warning_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_warning_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Sisa kalori harian Anda hampir habis. Pertimbangkan untuk mengurangi konsumsi makanan tinggi kalori atau meningkatkan aktivitas fisik."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_light"
+        app:layout_constraintTop_toBottomOf="@id/tv_warning_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_okay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/greenPrimer"
+        android:text="OK"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tv_warning_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="206dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

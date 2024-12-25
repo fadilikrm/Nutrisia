@@ -5,5 +5,7 @@ data class ViewProgram(
     val fullname: String = "",
     val program: String = "",
     val status_bmi: String = "",
-    val jml_kal: Int = 0
+    val jml_kal: Int = 0,
+    val bmi: Float,
+    val remaining_calories: Float
 )
