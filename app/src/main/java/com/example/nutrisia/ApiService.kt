@@ -10,6 +10,8 @@ import retrofit2.http.Part
 import retrofit2.http.PartMap
 import retrofit2.Response
 import com.example.nutrisia.ScanCalorieRequest
+import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface ApiService {
     @POST("api/kelompok_1/register.php")
@@ -29,15 +31,19 @@ interface ApiService {
 
     @Multipart
     @POST("api/kelompok_1/update_profile.php")
-    fun updateProfile(
-        @PartMap params: Map<String, @JvmSuppressWildcards RequestBody>,
-        @Part foto: MultipartBody.Part?
-    ): Call<ProfileResponse>
+    fun updateProfile(@PartMap params: Map<String, @JvmSuppressWildcards RequestBody>, @Part foto: MultipartBody.Part?): Call<ProfileResponse>
 
     @POST("api/kelompok_1/save_calories.php")
-    suspend fun postScanCalorie(
-        @Body request: ScanCalorieRequest
-    ): Response<ApiResponse>
+    fun postScanCalorie(@Body request: ScanCalorieRequest): Response<ApiResponse>
+
+    @POST("api/kelompok_1/select_olahraga.php")
+    fun getSport(@Body params: Map<String, String>): Call<ViewSportResponse>
+
+    @POST("api/kelompok_1/olahraga.php")
+    fun InsertSport(@Body request: InsertSport): Call<InsertSport>
+
+    @GET("api/kelompok_1/get_calories.php")
+    fun getFoodHistory(@Query("user_id") userId: Int): Call<FoodHistoryResponse>
 }
 
 

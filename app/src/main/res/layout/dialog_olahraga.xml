@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Spinner untuk Jenis Olahraga -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jenis Olahraga"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:textColor="#000000" />
+
+    <Spinner
+        android:id="@+id/spinnerJenisOlahraga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown" />
+
+    <!-- Input Durasi -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Durasi (Menit)"
+        android:textSize="16sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/etDurasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Masukkan durasi"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Tombol Simpan -->
+    <Button
+        android:id="@+id/btnSimpanOlahraga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Simpan"
+        android:background="@color/design_default_color_primary"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

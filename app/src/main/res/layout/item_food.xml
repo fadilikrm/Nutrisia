@@ -4,45 +4,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#FFFFFF"
     android:padding="8dp">
 
     <!-- Food Image -->
     <ImageView
         android:id="@+id/food_image"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/burger_fries"
+        android:src="@drawable/calories"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Food Name -->
+    <!-- Total Calories -->
     <TextView
-        android:id="@+id/food_name"
+        android:id="@+id/total_calories"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Food Name"
+        android:text="Calories:"
+        android:textSize="14sp"
         android:fontFamily="@font/coolvetica_rg"
-        android:textSize="16sp"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="@id/food_image"
         app:layout_constraintStart_toEndOf="@id/food_image"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Food Description -->
+    <!-- Scan Date -->
     <TextView
-        android:id="@+id/food_description"
+        android:id="@+id/scan_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:text="Short description of the food."
-        android:textSize="14sp"
+        android:text="Scan Date:"
+        android:textSize="12sp"
         android:fontFamily="@font/roboto_regular"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/food_name"
+        app:layout_constraintTop_toBottomOf="@id/total_calories"
         app:layout_constraintStart_toEndOf="@id/food_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/food_image" />

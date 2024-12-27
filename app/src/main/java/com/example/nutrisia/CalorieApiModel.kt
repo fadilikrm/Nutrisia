@@ -34,5 +34,17 @@ data class ScanCalorieRequest(
 data class ApiResponse(
     val status: Boolean,
     val message: String,
-    val data: CalorieData? // Data bagian ini bisa null jika tidak ada data yang dikembalikan
+    val data: CalorieData?
+)
+
+data class FoodHistoryResponse(
+    val status: Boolean,
+    val message: String,
+    val data: List<FoodItem>
+)
+
+data class FoodItem(
+    val food_name: String,
+    val total_calories: Double,
+    val scan_date: String
 )

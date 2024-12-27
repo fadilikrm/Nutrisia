@@ -1,7 +1,7 @@
 package com.example.nutrisia
 
-data class SelectProfileResponse(
+data class ViewSportResponse(
     val status: Boolean = false,
     val message: String? = null,
-    val data: SelectProfile? = null
+    val data: List<ViewSport>? = null
 )

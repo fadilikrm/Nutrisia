@@ -93,7 +93,7 @@ class LoginActivity : AppCompatActivity() {
     private fun showForgotPasswordDialog() {
         AlertDialog.Builder(this)
             .setTitle("Lupa Password?")
-            .setMessage("Silakan hubungi saya melalui WhatsApp di nomor 089502743924")
+            .setMessage("Silakan hubungi kami melalui WhatsApp di nomor 089502743924")
             .setPositiveButton("OK") { dialog, _ ->
                 dialog.dismiss()
             }

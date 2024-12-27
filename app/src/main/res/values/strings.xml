@@ -1,3 +1,70 @@
 <resources>
     <string name="app_name">Nutrisia</string>
+<string-array name="jenis_olahraga_text">
+    <item>Lari Santai</item>
+    <item>Berenang</item>
+    <item>Futsal</item>
+    <item>Sepak Bola</item>
+    <item>Basket</item>
+    <item>Berjalan Cepat</item>
+    <item>Yoga</item>
+    <item>Senam Aerobik</item>
+    <item>Bersepeda</item>
+    <item>Gym Angkat Beban</item>
+    <item>Lari Cepat</item>
+    <item>Zumba</item>
+    <item>Pilates</item>
+    <item>Crossfit</item>
+    <item>Badminton</item>
+    <item>Tenis</item>
+    <item>Panjat Tebing</item>
+    <item>Ski Air</item>
+    <item>Skateboarding</item>
+    <item>Bersepeda Gunung</item>
+    <item>Voli</item>
+    <item>Pingpong</item>
+    <item>Renang Gaya Dada</item>
+    <item>Renang Gaya Bebas</item>
+    <item>Pencak Silat</item>
+    <item>Taekwondo</item>
+    <item>Karate</item>
+    <item>Kempo</item>
+    <item>Angkat Besi</item>
+    <item>Dayung</item>
+    <item>Beladiri</item>
+</string-array>
+
+<string-array name="jenis_olahraga_value">
+    <item>lari_santai</item>
+    <item>berenang</item>
+    <item>futsal</item>
+    <item>sepak_bola</item>
+    <item>basket</item>
+    <item>berjalan_cepat</item>
+    <item>yoga</item>
+    <item>senam_aerobik</item>
+    <item>bersepeda</item>
+    <item>gym_angkat_beban</item>
+    <item>lari_cepat</item>
+    <item>zumba</item>
+    <item>pilates</item>
+    <item>crossfit</item>
+    <item>badminton</item>
+    <item>tenis</item>
+    <item>panjat_tebing</item>
+    <item>ski_air</item>
+    <item>skateboarding</item>
+    <item>bersepeda_gunung</item>
+    <item>voli</item>
+    <item>pingpong</item>
+    <item>renang_gaya_dada</item>
+    <item>renang_gaya_bebas</item>
+    <item>pencak_silat</item>
+    <item>taekwondo</item>
+    <item>karate</item>
+    <item>kempo</item>
+    <item>angkat_besi</item>
+    <item>dayung</item>
+    <item>beladiri</item>
+</string-array>
 </resources>

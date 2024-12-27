@@ -59,7 +59,10 @@
             android:name=".ProfileActivity"
             android:exported="true" />
         <activity
-            android:name=".ActivityBeratBadan"
+            android:name=".ActivityOlahraga"
+            android:exported="true" />
+        <activity
+            android:name=".FoodHistoryActivity"
             android:exported="true" />
     </application>
 

@@ -216,7 +216,7 @@ class OcrActivity : AppCompatActivity() {
         val calorieInfo = currentCalorieInfo ?: return
         val currentDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
 
-        val userId = getUserId()
+        val userId = getUserId()  // Retrieve the user ID passed from DiaryActivity
 
         if (userId != null) {
             val scanCalorieRequest = ScanCalorieRequest(
@@ -320,6 +320,7 @@ class OcrActivity : AppCompatActivity() {
     }
 
     private fun getUserId(): Int? {
-        return 43 // Ganti dengan logika nyata untuk mengambil user_id
+        // Get the user ID passed through the Intent
+        return intent.getIntExtra("USER_ID", -1) // Default value is -1 if not found
     }
 }
