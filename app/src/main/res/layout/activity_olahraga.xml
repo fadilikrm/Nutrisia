@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -43,44 +44,28 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- Sub Judul -->
-        <TextView
-            android:id="@+id/tvAktivitasHistory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/coolvetica_rg"
-            android:text="History Aktivitas Fisik"
-            android:textSize="14sp"
-            android:layout_gravity="center_horizontal" />
-
-        <!-- Input Tanggal -->
-        <LinearLayout
+        <!-- Filter Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/filter_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tanggal:"
-                android:layout_gravity="center_vertical"
-                android:textSize="14sp"
-                android:layout_marginEnd="8dp" />
-
+            <!-- Date Input -->
             <EditText
-                android:id="@+id/etTanggal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Masukkan tanggal"
-                android:background="@drawable/border"
-                android:padding="8dp"
-                android:textSize="14sp"
-                android:inputType="date"
-                android:textColor="#000000" />
-        </LinearLayout>
+                android:id="@+id/date_edit_text"
+                android:layout_width="380dp"
+                android:layout_height="44dp"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:focusable="false"
+                android:hint="Select date"
+                android:inputType="none"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
@@ -98,9 +83,8 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/coolvetica_rg"
             android:text="Total Kalori: 0"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:layout_gravity="center_horizontal" />
-
 
     </LinearLayout>
 

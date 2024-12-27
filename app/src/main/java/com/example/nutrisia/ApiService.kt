@@ -10,6 +10,8 @@ import retrofit2.http.Part
 import retrofit2.http.PartMap
 import retrofit2.Response
 import com.example.nutrisia.ScanCalorieRequest
+import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface ApiService {
     @POST("api/kelompok_1/register.php")
@@ -39,6 +41,9 @@ interface ApiService {
 
     @POST("api/kelompok_1/olahraga.php")
     fun InsertSport(@Body request: InsertSport): Call<InsertSport>
+
+    @GET("api/kelompok_1/get_calories.php")
+    fun getFoodHistory(@Query("user_id") userId: Int): Call<FoodHistoryResponse>
 }
 
 

@@ -3,13 +3,14 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="?android:attr/colorBackground">
+    android:background="#FFFFFF">
 
     <!-- ViewPager2 untuk menampilkan halaman onboarding -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="#FFFFFF"
         android:layout_weight="1" />
 
     <!-- TabLayout untuk menampilkan indikator tab di bagian bawah ViewPager -->
@@ -18,6 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="#FFFFFF"
         app:tabIndicatorFullWidth="false" />
 
     <!-- LinearLayout untuk tombol Skip dan Next -->
@@ -27,6 +29,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:padding="16dp"
+        android:background="#FFFFFF"
         android:layout_marginBottom="20dp">
 
         <!-- Tombol Skip untuk melompat ke LoginActivity -->

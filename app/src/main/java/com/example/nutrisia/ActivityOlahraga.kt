@@ -35,16 +35,16 @@ class ActivityOlahraga : AppCompatActivity() {
 
         // Atur tanggal hari ini di EditText
         val todayDate = dateFormat.format(calendar.time)
-        binding.etTanggal.setText(todayDate)
+        binding.dateEditText.setText(todayDate)  // Gunakan ID yang sesuai di XML
 
         // Ketika EditText tanggal diklik, tampilkan DatePicker
-        binding.etTanggal.setOnClickListener {
+        binding.dateEditText.setOnClickListener {
             DatePickerDialog(
                 this,
                 { _, year, month, dayOfMonth ->
                     calendar.set(year, month, dayOfMonth)
                     val selectedDate = dateFormat.format(calendar.time)
-                    binding.etTanggal.setText(selectedDate)
+                    binding.dateEditText.setText(selectedDate)
                     fetchSportData(selectedDate) // Ambil data sesuai tanggal yang dipilih
                 },
                 calendar.get(Calendar.YEAR),
@@ -107,7 +107,6 @@ class ActivityOlahraga : AppCompatActivity() {
         binding.tvTotalKalori.text = "Total Kalori: %.2f".format(totalKalori)
     }
 
-
     private fun showAddSportDialog() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_olahraga, null)
 
@@ -165,7 +164,7 @@ class ActivityOlahraga : AppCompatActivity() {
                         override fun onResponse(call: Call<InsertSport>, response: Response<InsertSport>) {
                             if (response.isSuccessful) {
                                 Toast.makeText(this@ActivityOlahraga, "Data berhasil ditambahkan", Toast.LENGTH_SHORT).show()
-                                fetchSportData(binding.etTanggal.text.toString()) // Refresh data
+                                fetchSportData(binding.dateEditText.text.toString()) // Refresh data
                                 dialog.dismiss() // Tutup dialog setelah data berhasil dikirim
                             } else {
                                 Log.e("API Error", response.errorBody()?.string() ?: "Unknown error")
@@ -191,5 +190,4 @@ class ActivityOlahraga : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("NutrisiaPrefs", MODE_PRIVATE)
         return sharedPreferences.getInt("user_id", -1).takeIf { it != -1 }
     }
-
 }

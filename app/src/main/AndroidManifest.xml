@@ -61,6 +61,9 @@
         <activity
             android:name=".ActivityOlahraga"
             android:exported="true" />
+        <activity
+            android:name=".FoodHistoryActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

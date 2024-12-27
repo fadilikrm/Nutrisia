@@ -53,6 +53,12 @@ class DiaryActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.HistoryMakanan.setOnClickListener {
+            val intent = Intent(this, FoodHistoryActivity::class.java)
+            intent.putExtra("USER_ID", userId)
+            startActivity(intent)
+        }
+
         binding.btnIsiProfile.setOnClickListener {
             if (userId != null) {
                 val intent = Intent(this, ActivityInsertProfile::class.java)
