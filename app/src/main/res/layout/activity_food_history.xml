@@ -45,7 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Food History"
+                    android:text="History Scan Makanan"
                     android:textSize="24sp"
                     android:textColor="?android:textColorPrimary"
                     android:fontFamily="@font/coolvetica_rg"
