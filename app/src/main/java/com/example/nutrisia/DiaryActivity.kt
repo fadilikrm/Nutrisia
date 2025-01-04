@@ -5,10 +5,8 @@ import android.graphics.Color
 import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nutrisia.databinding.ActivityDailyStreakBinding
-import com.example.nutrisia.databinding.DialogWarningBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -41,6 +39,8 @@ class DiaryActivity : AppCompatActivity() {
             startActivity(Intent(this, AboutUsActivity::class.java))
         }
 
+        fetchUserData(userId)
+
         binding.IconProfile.setOnClickListener {
             val intent = Intent(this, ActivityUserInformation::class.java)
             intent.putExtra("USER_ID", userId)
@@ -60,19 +60,16 @@ class DiaryActivity : AppCompatActivity() {
         }
 
         binding.btnIsiProfile.setOnClickListener {
-            if (userId != null) {
-                val intent = Intent(this, ActivityInsertProfile::class.java)
-                intent.putExtra("USER_ID", userId)
-                startActivity(intent)
-            } else {
-                Toast.makeText(this, "User ID tidak ditemukan", Toast.LENGTH_SHORT).show()
-            }
+            val intent = Intent(this, ActivityInsertProfile::class.java)
+            intent.putExtra("USER_ID", userId)
+            startActivity(intent)
         }
 
         // Navigasi ke OCRActivity saat ll_food_target diklik
         val llFoodTarget = findViewById<LinearLayout>(R.id.ll_food_target)
         llFoodTarget.setOnClickListener {
             val intent = Intent(this, OcrActivity::class.java)
+            intent.putExtra("USER_ID", userId)
             startActivity(intent)
         }
     }
@@ -131,6 +128,11 @@ class DiaryActivity : AppCompatActivity() {
 
     private fun getLoggedInUserId(): Int? {
         val sharedPreferences = getSharedPreferences("NutrisiaPrefs", MODE_PRIVATE)
-        return sharedPreferences.getInt("user_id", -1).takeIf { it != -1 }
+        val userId = sharedPreferences.getInt("user_id", -1)
+        if (userId == -1) {
+            // Log error jika userId tidak ditemukan
+            Toast.makeText(this, "User ID tidak ditemukan di SharedPreferences", Toast.LENGTH_SHORT).show()
+        }
+        return userId.takeIf { it != -1 }
     }
 }

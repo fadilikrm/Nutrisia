@@ -34,7 +34,9 @@ interface ApiService {
     fun updateProfile(@PartMap params: Map<String, @JvmSuppressWildcards RequestBody>, @Part foto: MultipartBody.Part?): Call<ProfileResponse>
 
     @POST("api/kelompok_1/save_calories.php")
-    fun postScanCalorie(@Body request: ScanCalorieRequest): Response<ApiResponse>
+    suspend fun postScanCalorie(
+        @Body request: ScanCalorieRequest
+    ): Response<ApiResponse>
 
     @POST("api/kelompok_1/select_olahraga.php")
     fun getSport(@Body params: Map<String, String>): Call<ViewSportResponse>
@@ -45,5 +47,3 @@ interface ApiService {
     @GET("api/kelompok_1/get_calories.php")
     fun getFoodHistory(@Query("user_id") userId: Int): Call<FoodHistoryResponse>
 }
-
-
