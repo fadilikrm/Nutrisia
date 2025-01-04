@@ -27,6 +27,7 @@ import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import android.util.Size
+import androidx.annotation.OptIn
 
 class OcrActivity : AppCompatActivity() {
 
@@ -155,6 +156,7 @@ class OcrActivity : AppCompatActivity() {
         )
     }
 
+    @OptIn(ExperimentalGetImage::class)
     private fun processImageForOCR(imageProxy: ImageProxy) {
         val mediaImage = imageProxy.image ?: return
         val rotationDegrees = imageProxy.imageInfo.rotationDegrees
