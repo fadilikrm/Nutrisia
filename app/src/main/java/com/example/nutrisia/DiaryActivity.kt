@@ -3,6 +3,7 @@ package com.example.nutrisia
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -120,11 +121,37 @@ class DiaryActivity : AppCompatActivity() {
         if (remainingCalories < totalCalories * 0.2) {
             // Ubah warna menjadi merah
             binding.tvcalorieremainingvalue.setTextColor(Color.RED)
+            showWarningDialog()
         } else {
             // Ubah warna menjadi default (misalnya hitam)
             binding.tvcalorieremainingvalue.setTextColor(Color.BLACK)
         }
     }
+
+    private fun showWarningDialog() {
+        // Inflate layout dialog_warning.xml
+        val dialogView = layoutInflater.inflate(R.layout.dialog_warning, null)
+
+        // Buat instance AlertDialog dengan layout custom
+        val dialog = androidx.appcompat.app.AlertDialog.Builder(this)
+            .setView(dialogView)
+            .setCancelable(false) // Dialog tidak bisa ditutup dengan tombol kembali
+            .create()
+
+        // Temukan button "OK" dari layout dialog
+        val btnOkay = dialogView.findViewById<Button>(R.id.btn_okay)
+
+        // Atur properti dan aksi tombol "OK"
+        btnOkay.setBackgroundColor(resources.getColor(R.color.greenPrimer, null)) // Pastikan warnanya sesuai
+        btnOkay.setTextColor(resources.getColor(R.color.white, null))
+        btnOkay.setOnClickListener {
+            dialog.dismiss() // Tutup dialog saat tombol diklik
+        }
+
+        // Tampilkan dialog
+        dialog.show()
+    }
+
 
     private fun getLoggedInUserId(): Int? {
         val sharedPreferences = getSharedPreferences("NutrisiaPrefs", MODE_PRIVATE)
